@@ -35,28 +35,7 @@ public class CheckPermutation {
 		return true;
 	}
 	
-	//No whitespace and spaces allowed. Only chars
 
-	public static boolean checkChar(String s, String t) {
-		
-		int [] chars = new int[26];
-		
-		for(char ch: s.toLowerCase().toCharArray()) {
-			chars[ch-'a']++;
-		}
-		
-		for(char ch: t.toLowerCase().toCharArray()) {
-			chars[ch-'a']--;
-		}
-		
-		for(int i : chars) {
-			if(i != 0)
-				return false;
-		}
-		
-		return true;
-		
-	}
 
 	public static void main(String[] args) {
 		System.out.println(checkPerm("ab cd", "d acb"));

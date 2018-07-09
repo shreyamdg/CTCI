@@ -50,9 +50,9 @@ public class URLify {
 	public static void main(String[] args) {
 		String str = "Mr Jhon Smith    "; 
 		urlifyCharArray(str.toCharArray(), 13);
-		//System.out.println(urlifyString("Mr Jhon Smith    ", 13));
-		//System.out.println(urlifyString("ab c", 4));
-		//System.out.println(urlifyString(" ", 1));
+		System.out.println(urlifyString("Mr Jhon Smith    ", 13));
+		System.out.println(urlifyString("ab c", 4));
+		System.out.println(urlifyString(" ", 1));
 		
 		
 	}

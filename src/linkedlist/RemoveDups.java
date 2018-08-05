@@ -28,6 +28,8 @@ public class RemoveDups {
 		
 	}
 	
+	// 2) Second solution using two pointers.
+	
 	public void twoPointers(ListNode head) {
 		ListNode curr = head;
 		while(curr != null) {

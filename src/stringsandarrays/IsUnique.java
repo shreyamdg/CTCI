@@ -1,3 +1,4 @@
+package stringsandarrays;
 
 public class IsUnique {
 	public static boolean isUnique(String str) {

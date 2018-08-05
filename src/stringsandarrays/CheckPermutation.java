@@ -1,3 +1,4 @@
+package stringsandarrays;
 import java.util.HashMap;
 
 public class CheckPermutation {

@@ -36,6 +36,30 @@ public class CheckPermutation {
 		return true;
 	}
 	
+	public static boolean isAnagramTwo(String s, String t) {
+
+		if (s.isEmpty() && t.isEmpty())
+			return true;
+		if (s.length() != t.length())
+			return false;
+
+		int[] arr = new int[26];
+
+		for (char c : s.toCharArray()) {
+			arr[c - 'a'] = arr[c - 'a'] + 1;
+		}
+
+		for (char c : t.toCharArray()) {
+			arr[c - 'a'] = arr[c - 'a'] - 1;
+		}
+
+		for (int i = 0; i < 26; i++) {
+			if (arr[i] != 0)
+				return false;
+		}
+		return true;
+	}
+	
 
 
 	public static void main(String[] args) {

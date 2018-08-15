@@ -39,12 +39,7 @@ public class URLify {
 			}
 				
 		}
-		
-		//for(char ch:str) {
-			System.out.println(str.toString());
-		//}
-		
-		return "";
+		return str.toString();
 		
 	}
 	

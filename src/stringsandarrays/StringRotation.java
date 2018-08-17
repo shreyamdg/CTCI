@@ -18,4 +18,8 @@ public class StringRotation {
 			return false;
 		}
 	}
+	
+	public boolean anotherSolution(String A, String B) {
+		return (A+A).contains(B) && A.length() == B.length();
+	}
 }

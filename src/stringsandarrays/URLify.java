@@ -1,5 +1,7 @@
 package stringsandarrays;
 
+import java.util.Arrays;
+
 public class URLify {
 	
 	public static String urlifyString(String str, int trueLength) {
@@ -17,35 +19,34 @@ public class URLify {
 	}
 	
 	//in place insertion
-	public static String urlifyCharArray(char [] str, int trueLength) {
-		int spaceCount = 0, index, i = 0;
-		for(i = 0; i<trueLength; i++) {
-			if(str[i] == ' ')
-				spaceCount++;
-		}
-		index = trueLength + spaceCount*2;
-		if(trueLength < str.length) 
-			str[trueLength] = '\0';
-		
-		for(i = trueLength-1; i>0; i--) {
-			if(str[i] == ' ') {
-				str[index - 1] = '0';
-				str[index - 2] = '2';
-				str[index - 3] = '%';
-				index = index-3;
-			}else {
-				str[index-1] = str[i];
-				index--;
+	public static String urlifyCharArray(String str, int len) {
+		int countSpace =0;
+		for(int i =0; i<len; i++) {
+			if(str.charAt(i) == ' ') {
+				countSpace++;
 			}
-				
 		}
-		return str.toString();
 		
+		int trueLength = len + (2*countSpace) -1;
+		char [] arr = str.toCharArray();
+		for(int i = len-1; i >= 0; i--) {
+			if(arr[i] != ' ') {
+				arr[trueLength] = arr[i];
+				trueLength--;
+			}else {
+				arr[trueLength] = '0';
+				arr[trueLength-1] = '2';
+				arr[trueLength -2] = '%';
+				trueLength -= 3;
+			}
+		}
+		
+		return Arrays.toString(arr);
 	}
 	
 	public static void main(String[] args) {
 		String str = "Mr Jhon Smith    "; 
-		urlifyCharArray(str.toCharArray(), 13);
+		urlifyCharArray(str, 13);
 		System.out.println(urlifyString("Mr Jhon Smith    ", 13));
 		System.out.println(urlifyString("ab c", 4));
 		System.out.println(urlifyString(" ", 1));

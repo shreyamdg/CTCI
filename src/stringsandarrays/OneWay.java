@@ -16,6 +16,7 @@ public class OneWay {
 			if (str1.charAt(i) != str2.charAt(j)) {
 				if (edits == 1)
 					return false;
+				// If length of one string is more, then only possible edit is to remove a character
 				if (length1 > length2) {
 					i++;
 				} else if (length2 > length1) {

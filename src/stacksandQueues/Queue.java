@@ -2,7 +2,7 @@ package stacksandQueues;
 
 import java.util.NoSuchElementException;
 
-public class QueueImplementation<T> {
+public class Queue<T> {
 	private static class QueueNode<T> {
 		private T data;
 		private QueueNode<T> next;

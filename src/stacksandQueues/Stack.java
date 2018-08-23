@@ -2,7 +2,7 @@ package stacksandQueues;
 
 import java.util.EmptyStackException;
 
-public class StackImplementation<T> {
+public class Stack<T> {
 	private static class StackNode<T> {
 		private T data;
 		private StackNode<T> next;

@@ -62,4 +62,12 @@ public class FixedMultiStack {
 		return offset + size - 1;
 	}
 
+	public int[] getStackValues(int stackNum) {
+		int[] items = new int[sizes[stackNum]];
+		for (int i = 0; i < items.length; i++) {
+			items[i] = values[stackNum * stackCapacity + i];
+		}
+		return items;
+	}
+
 }

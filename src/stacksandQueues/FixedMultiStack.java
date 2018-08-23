@@ -14,6 +14,7 @@ public class FixedMultiStack {
 		sizes = new int [numberOfStacks];
 	}
 	
+	/* Push value onto stack. */
 	public void push(int stackNum, int value) throws FullStackException {
 		/* Check that we have space for the next element */
 		if (isFull(stackNum)) { 
@@ -25,6 +26,7 @@ public class FixedMultiStack {
 		values[indexOfTop(stackNum)] = value;	
 	}
 	
+	/* Pop item from top stack. */
 	public int pop(int stackNum) {
 		if (isEmpty(stackNum)) {
 			throw new EmptyStackException();
@@ -37,6 +39,7 @@ public class FixedMultiStack {
 		return value;
 	}
 	
+	/* Return top element. */
 	public int peek(int stackNum) {
 		if (isEmpty(stackNum)) {
 			throw new EmptyStackException();
@@ -52,6 +55,7 @@ public class FixedMultiStack {
 		return sizes[stackNum] == stackCapacity;
 	}
 	
+	/* Returns index of the top of the stack. */
 	private int indexOfTop(int stackNum) {
 		int offset = stackNum * stackCapacity;
 		int size = sizes[stackNum];

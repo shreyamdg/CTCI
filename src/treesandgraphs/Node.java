@@ -5,7 +5,7 @@ class Node {
     private Node adjacent[];
     public int adjacentCount;
     private String vertex;
-    public State state;
+    public treesandgraphs.RouteBetweenNodes.State state;
     public Node(String vertex, int adjacentLength) {
         this.vertex = vertex;                
         adjacentCount = 0;        

@@ -1,4 +1,4 @@
-package trees;
+package treesandgraphs;
 
 public class TreeNode {
 	int val;

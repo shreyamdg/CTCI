@@ -1,10 +1,11 @@
 package treesandgraphs;
 
 class Node {
+	enum State{VISITED, UNVISITED, VISITING};
     private Node adjacent[];
     public int adjacentCount;
     private String vertex;
-    //public Question.State state;
+    public State state;
     public Node(String vertex, int adjacentLength) {
         this.vertex = vertex;                
         adjacentCount = 0;        
